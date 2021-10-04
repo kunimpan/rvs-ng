@@ -1,0 +1,53 @@
+<div style="position: fixed; left: 0; width: 300px;">
+    <div class="sidebar-profile">
+      <div class="row">
+        <div class="col-8">
+                <p class="hospital-name">โรงพยาบาลแพร่</p>
+                <p style=" color:#ffffff;">คุณขยัน อดทน</p>
+        </div>
+        <div class="col-4">
+                <img class="imglogo" src={{imglottery}}>
+        </div>
+    </div>
+    </div>
+    <div>
+      <mat-nav-list>
+        <a mat-list-item (click)="onClickMenu(USER_URL.HOSPITAL_SETTING)">
+          <mat-icon>build</mat-icon>
+          <span class="Prompt">รายละเอียดโรงพยาบาล</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.BANKS)">
+          <mat-icon>credit_card</mat-icon>
+          <span class="Prompt">บัญชีธนาคาร</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.VACCINE)">
+          <mat-icon>add_circle</mat-icon>
+          <span class="Prompt">เพิ่มวัคซีน</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.MANAGE_BOOKING)">
+          <mat-icon>contacts</mat-icon>
+          <span class="Prompt">จัดการคิวจอง</span>
+        </a>
+      </mat-nav-list>
+      <!-- <hr class="sidebar">
+      <mat-nav-list>
+        <a mat-list-item href="">
+          <mat-icon>card_giftcard</mat-icon>
+          ชำระค่าบริการ
+        </a>
+        <a mat-list-item href="">
+          <mat-icon>logout</mat-icon>
+          ออกจากระบบ
+        </a>
+        <a mat-list-item href="">
+          <mat-icon>info</mat-icon>
+          คู่มือช่วยเหลือ
+        </a>
+      </mat-nav-list> -->
+    </div>
+    <div class="sidebar-bottom">
+      
+      <p style="text-align: right; margin-right: 5%;">RVS v0.1</p>
+    </div>
+  </div>
+  

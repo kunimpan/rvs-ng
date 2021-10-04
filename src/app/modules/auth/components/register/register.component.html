@@ -1,0 +1,141 @@
+<body>
+    <br>
+    <div class="text-center">
+        <img src="../../../../../assets/images/1.png" alt="WashApp POS" style="max-width: 200px" />
+    </div><br>
+    <div class="container-fluid" style="max-width: 450px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <h4 class="text-center" style="font-weight: bold; margin-bottom: 5px">สมัครสมาชิก</h4>
+                        <h5 class="text-center" style="font-weight: bold; margin-bottom: 5px">Reserve Vaccine System
+                        </h5>
+                        <!-- <h6 class="text-center">
+                            ระบบสั่งจองวัคซีน Covid-19
+                        </h6> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'ชื่อ'">ชื่อผู้ใช้
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label class="float-label" [translate]="'ชื่อ'">รหัสผ่าน
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+
+                    <div class="col-sm-6 mb-3">
+                        <label class="float-label" [translate]="'ชื่อ'">ยืนยันรหัสผ่าน
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'คำนำหน้า'">คำนำหน้า
+                        </label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>นาย</option>
+                            <option value="2">นาง</option>
+                            <option value="3">นางสาว</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label class="float-label" [translate]="'ชื่อ'">ชื่อ
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="float-label" [translate]="'นามสกุล'">นามสกุล
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_lastname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'รหัสบัตรประชาชน'">รหัสบัตรประชาชน
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'วันเกิด'">วันเกิด
+                        </label>
+                        <input type="date" class="form-control" formControlName="user_firstname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'เบอร์โทรศัพท์'">เบอร์โทรศัพท์
+                        </label>
+                        <input type="text" class="form-control" formControlName="user_firstname" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <label class="float-label" [translate]="'โรงพยาบาลที่ทำงาน'">โรงพยาบาลที่ทำงาน
+                        </label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>โรงพยาบาล...</option>
+                            <option value="1">โรงพยาบาลแพร่</option>
+                            <option value="2">โรงพยาบาลแพร่ราม</option>
+                            <option value="3">โรงพยาบาลแพร่คริสเตียร</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="row text-left">
+                    <div class="col-12">
+                        <div class="checkbox-fade fade-in-primary">
+                            <label>
+                                <input type="checkbox" formControlName="remember" />
+                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                <span class="text-inverse"> ยืนยันการสมัคร</span>
+                            </label>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">
+                        <button type="submit" class="btn btn-login">
+                            ลงทะเบียน
+                        </button>
+                    </div>
+                </div><br>
+
+                <div class="row m-t-30">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <span [translate]>มีบัญชีแล้ว ?</span>
+                                &nbsp;
+                                <a class="" style="text-decoration: none; color: #3399ff;"
+                                    [routerLink]="['', APP_URL.AUTH, AUTH_URL.LOGIN]" [translate]>เช้าสู่ระบบ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>

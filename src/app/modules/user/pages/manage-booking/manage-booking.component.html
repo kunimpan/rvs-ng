@@ -1,0 +1,156 @@
+<app-content>
+    <br>
+    <div class="row d-flex bd-highlight" style="margin-bottom: 10px;">
+        <div class="col-lg-6 col-sm-12 text-center-mobile">
+            <button type="button" class="btn btn-create btn-moblie" (click)="openModal(template)">
+                สร้างรอบจอง
+            </button>
+            <button type="button" class="btn btn-needle1 btn-moblie">
+                รอบฉีดเข็มแรก
+            </button>
+            <button type="button" class="btn btn-needle2 btn-moblie">
+                รอบฉีดเข็มสอง
+            </button>
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="input-group mb-3 input-center-mobile d-flex justify-content-end">
+                <span class="input-group-text" id="basic-addon1"
+                    style="background: #3399ff; color: #ffffff;">ค้นหาข้อมูล</span>
+                <input type="text" class="form-control" placeholder="กรอกข้อมูล" style="max-width: 185px;">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">ค้นหา</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" style="border:#D4D4D4; vertical-align: middle;">
+            <thead>
+                <tr>
+                    <th class="" style="min-width: 50px;">ลำดับ</th>
+                    <th class="" style="min-width: 120px;">เลขที่รอบจอง</th>
+                    <th class="" style="min-width: 100px;">วัคซีน</th>
+                    <th class="" style="min-width: 55px;">เข็มที่</th>
+                    <th class="" style="min-width: 100px;">วันเปิดจอง</th>
+                    <th class="" style="min-width: 100px;">วันปิดจอง</th>
+                    <th class="" style="min-width: 130px;">จำนวนคิวจอง</th>
+                    <th class="" style="min-width: 270px;">จัดการข้อมูล</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="text-align: center;">
+                    <th scope="row">001</th>
+                    <td>RR0000001</td>
+                    <td>Moderna</td>
+                    <td>1</td>
+                    <td>20/08/64</td>
+                    <td>02/09/64</td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex align-items-center justify-content-center bg-number">
+                                23/50
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn btn-outline-success"
+                            (click)="onClickMenu(USER_URL.MANAGE_ORDERS)">ตรวจสอบ</button>&nbsp;
+                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
+                        <button type="button" class="btn btn-outline-danger">ลบ</button>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <th scope="row">002</th>
+                    <td>RR0000002</td>
+                    <td>Moderna</td>
+                    <td>1</td>
+                    <td>20/08/64</td>
+                    <td>02/09/64</td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex align-items-center justify-content-center bg-number-red">
+                                49/50
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success">ตรวจสอบ</button>&nbsp;
+                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
+                        <button type="button" class="btn btn-outline-danger">ลบ</button>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <th scope="row">003</th>
+                    <td>RR0000003</td>
+                    <td>Moderna</td>
+                    <td>1</td>
+                    <td>20/08/64</td>
+                    <td>02/09/64</td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex align-items-center justify-content-center bg-number-red">
+                                45/50
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success">ตรวจสอบ</button>&nbsp;
+                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
+                        <button type="button" class="btn btn-outline-danger">ลบ</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #template>
+        <div class="modal-header">
+            <h6 class="modal-title pull-left" [translate]>
+                เพิ่มรอบจอง
+            </h6>
+            <button type="button" class="btn-close pull-right" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group row form-default">
+                <label class="col-sm-3 col-form-label" [translate]>ยี่ห้อวัคซีน<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>เลือกวัคซีน</option>
+                        <option value="1">AstraZeneca</option>
+                        <option value="2">Pfizer</option>
+                        <option value="3">Moderna</option>
+                      </select>
+                </div>
+            </div><br>
+
+            <div class="form-group row form-default">
+                <label class="col-sm-3 col-form-label" [translate]>วันเปิดจอง<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" formControlName="setup_product_name" />
+                </div>
+            </div><br>
+
+            <div class="form-group row form-default">
+                <label class="col-sm-3 col-form-label" [translate]>วันปิดจอง<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" formControlName="setup_product_name" />
+                </div>
+            </div><br>
+
+            <div class="form-group row form-default">
+                <label class="col-sm-5 col-form-label" [translate]>จำนวนคิวจองสูงสุด<span class="text-danger">*</span></label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" formControlName="setup_product_name" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-success" [translate]>
+                บันทึกข้อมูล
+            </button>
+        </div>
+    </ng-template>
+
+</app-content>

@@ -1,0 +1,126 @@
+<div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper" style="border-right: 2px solid #D6DBDF;"
+    [ngClass]="status ? 'hide' : 'show'">
+    <div class="sidebar-heading text-center" style="height: 100px;">
+      <img src="../../../../../assets/images/4.5a.png" style="width: 200px;" />
+    </div>
+    <hr>
+    
+    <div class="list-group list-group-flush">
+      <h4 class="Prompt text-center"><b>โรงพยาบาลแพร่</b></h4>
+      <mat-nav-list>
+        <a mat-list-item (click)="onClickMenu(USER_URL.DASHBOARD)">
+          <mat-icon>dashboard</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">Dashboard</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.HOSPITAL_SETTING)">
+          <mat-icon>build</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">รายละเอียดโรงพยาบาล</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.BANKS)">
+          <mat-icon>credit_card</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">บัญชีธนาคาร</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.VACCINE)">
+          <mat-icon>add_circle</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">เพิ่มวัคซีน</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.MANAGE_BOOKING)">
+          <mat-icon>contacts</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">จัดการคิวจอง</span>
+        </a>
+        <a mat-list-item (click)="onClickMenu(USER_URL.SCAN_QRCODE)">
+          <mat-icon>settings_overscan</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">สแกนคิวอาร์โค้ด</span>
+        </a>
+      </mat-nav-list>
+      <!-- <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.DASHBOARD)"> Dashboard</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.HOSPITAL_SETTING)">รายละเอียดโรงพยาบาล</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.BANKS)">บัญชีธนาคาร</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.VACCINE)">เพิ่มวัคซีน</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.MANAGE_BOOKING)">จัดการคิวจอง</a>
+      <a class="list-group-item list-group-item-action bg-light">Status</a> -->
+    </div>
+    <div class="sidebar-bottom">
+
+      <p style="text-align: right; margin-right: 5%;">RVS v0.1</p>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-danger" style="margin-bottom: 5%;">ออกจากระบบ</button>
+      </div>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #D6DBDF;">
+
+      <div class="container-fluid">
+        <button class="btn btn-primary" (click)="clickEvent()">เปิด/ปิด เมนู</button>
+        <div style="text-align: left;" >
+          <span>ยินดีต้อนรับ คุณขยัน อดทน</span>
+        </div>
+        <hr>
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+        </div> -->
+      </div>
+
+    </nav>
+
+    <div class="container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+
+
+
+<!-- <mat-drawer-container class="example-container" hasBackdrop="">
+    <mat-drawer #drawer mode="over">
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar class="" color="#3399ff">
+        <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+          <mat-icon style="color:white;">menu</mat-icon>
+        </button>
+        <span class="name-app">RVS App</span>
+      </mat-toolbar>
+      <div class="container">
+        <ng-content></ng-content>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container> -->

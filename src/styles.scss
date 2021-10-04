@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+$color-primary: #0092d4;
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+html, 
+body { height: 100%; }
+body { font-size: 16px; margin: 0; font-family: Prompt, "Helvetica Neue", sans-serif; }
+
+@media only screen and (max-width: 600px) {
+    .text-center-mobile {
+        text-align: center !important;
+        margin-bottom: 10px;
+      }
+
+    .input-center-mobile {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    
+    .btn-moblie{
+        font-size: 12px;
+        width: 105px;
+    }
+}
+
+
+

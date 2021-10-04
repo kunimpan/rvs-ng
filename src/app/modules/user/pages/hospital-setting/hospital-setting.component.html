@@ -1,0 +1,181 @@
+<app-content>
+    <br>
+    <div class="">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-3">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-12">
+                        <h5 [translate]="'ตั้งค่าโรงพยาบาล'">ตั้งค่าโรงพยาบาล</h5>
+                        <hr />
+                        <div class="row ml-3">
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group row">
+                              <a [routerLink]="[]" fragment="section1">
+                                
+                                <span style="text-decoration: none;">รายละเอียดโรงพยาบาล</span>
+                              </a>
+                            </div>
+        
+                            <div class="form-group row">
+                              <a [routerLink]="[]" fragment="section2">
+                                
+                                <span style="text-decoration: none;">ช่องทางการติดต่ออื่น</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col-sm-12 col-md-9">
+                <div class="card" >
+                    <div class="card-header card-sub-title">
+                        <h5 #section1 [translate]="'รายละเอียดโรงพยาบาล'">
+                            รายละเอียดโรงพยาบาล
+                        </h5>
+                        <span [translate]="'กรอกข้อมูลให้ครบถ้วน เพื่อประโยชน์สูงสุดในการใช้งาน'">
+                            กรอกข้อมูลให้ครบถ้วน เพื่อประโยชน์สูงสุดในการใช้งาน
+                        </span>
+                    </div>
+
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        ชื่อโรงพยาบาล<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ที่อยู่'">
+                                        ที่อยู่<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_address" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        Tel.<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        E-mail<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ที่อยู่'">
+                                        แผนที่
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <!--Google map-->
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.649529332565!2d100.1515582153049!3d18.13396878561503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d8c23dfba58bdf%3A0xa9a8a26f7614e95a!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4LmB4Lie4Lij4LmIIFBocmFlIEhvc3BpdGFs!5e0!3m2!1sth!2sth!4v1632979483518!5m2!1sth!2sth"
+                                            width="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                            style="max-width: px;"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'Logo Shop'">
+                                        รูปโปรไฟล์
+                                    </p>
+                                    <div class="col-sm-6 col-lg-8 col-8">
+                                        <div>
+                                            <img class="imglogo" [innerHtml]='msg' *ngIf="msg" src={{imageIcon}}
+                                                style="max-width: 180px;">
+                                            <img [src]="url" *ngIf="url" style="max-height: 150px;">
+                                        </div>
+
+                                        <div class="input-group mb-2">
+                                            <input type="file" class="form-control" (change)="selectFile($event)">
+                                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'Logo Shop'">
+                                        รูปภาพโรงพยาบาล<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 col-8">
+                                        <div>
+                                            <img class="imglogo" [innerHtml]='msg2' *ngIf="msg2" src={{imageIcon}}
+                                                style="max-width: 180px;">
+                                            <img [src]="url2" *ngIf="url2" style="max-height: 150px;">
+                                        </div>
+                                        <div class="input-group mb-2">
+                                            <input type="file" class="form-control" (change)="selectFile2($event)">
+                                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header card-sub-title">
+                        <h5 #section2 [translate]="'รายละเอียดร้านค้า'">
+                            ช่องทางการติดต่ออื่น
+                        </h5>
+                    </div>
+
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        Facebook<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        Line<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-block text-center">
+                        <div class="col-12 pl-0 pr-0">
+                            <hr />
+                            <button class="btn btn-success" type="submit" [translate]="'บันทึกข้อมูล'">
+                                บันทึกข้อมูล
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</app-content>
