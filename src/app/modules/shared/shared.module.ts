@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ContentComponent } from './content/content.component';
 import { MaterialModule } from 'src/app/material-module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
     ContentComponent,
     SidebarComponent,
+    BackgroundComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ContentComponent,
     MaterialModule,
     SidebarComponent,
+    BackgroundComponent,
   ]
 })
 export class SharedModule { }

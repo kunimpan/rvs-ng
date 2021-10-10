@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { ChartModule } from 'angular2-chartjs';
+import 'chart.piecelabel.js';
 
 @NgModule({
     imports: [
@@ -14,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
         MatIconModule,
         MatDividerModule,
         MatListModule,
+        ChartModule
     ],
     exports: [
         MatToolbarModule,
@@ -22,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
         MatIconModule,
         MatDividerModule,
         MatListModule,
+        ChartModule
     ],
 })
 export class MaterialModule { }

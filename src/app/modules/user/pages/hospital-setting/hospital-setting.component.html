@@ -2,40 +2,41 @@
     <br>
     <div class="">
         <div class="row">
-
             <div class="col-sm-12 col-md-3">
-                <div class="card">
-                  <div class="card-header">
+                <div class="card-header border4" style="margin-bottom: 10px;background-color: #EAECEE ;">
                     <div class="row">
-                      <div class="col-12">
-                        <h5 [translate]="'ตั้งค่าโรงพยาบาล'">ตั้งค่าโรงพยาบาล</h5>
-                        <hr />
-                        <div class="row ml-3">
-                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="form-group row">
-                              <a [routerLink]="[]" fragment="section1">
-                                
-                                <span style="text-decoration: none;">รายละเอียดโรงพยาบาล</span>
-                              </a>
-                            </div>
-        
-                            <div class="form-group row">
-                              <a [routerLink]="[]" fragment="section2">
-                                
-                                <span style="text-decoration: none;">ช่องทางการติดต่ออื่น</span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        <div class="col-12">
+                            <h5 [translate]="'ตั้งค่าโรงพยาบาล'">ตั้งค่าโรงพยาบาล</h5>
+                            <hr />
+                            <div class="row ml-3">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group row">
+                                        <a [routerLink]="['', APP_URL.USER, USER_URL.HOSPITAL_SETTING]"
+                                            fragment="section1">
 
-            <div class="col-sm-12 col-md-9">
-                <div class="card" >
-                    <div class="card-header card-sub-title">
+                                            <span style="text-decoration: none;"
+                                                [translate]="'รายละเอียดโรงพยาบาล'">รายละเอียดโรงพยาบาล</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <a [routerLink]="['', APP_URL.USER, USER_URL.HOSPITAL_SETTING]"
+                                            fragment="section2">
+
+                                            <span style="text-decoration: none;"
+                                                [translate]="'ช่องทางการติดต่ออื่น'">ช่องทางการติดต่ออื่น</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="card border4">
+                    <div class="card-header card-sub-title" style="background-color: #EAECEE ;">
                         <h5 #section1 [translate]="'รายละเอียดโรงพยาบาล'">
                             รายละเอียดโรงพยาบาล
                         </h5>
@@ -44,9 +45,9 @@
                         </span>
                     </div>
 
-                    <div class="card-header">
+                    <div class="card-header border2" style="background-color: #EAECEE ;">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group row">
                                     <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
                                         ชื่อโรงพยาบาล<span class="text-danger">*</span>
@@ -85,14 +86,15 @@
 
                                 <div class="form-group row">
                                     <p class="col-sm-4 col-lg-4" [translate]="'ที่อยู่'">
-                                        แผนที่
+                                        ลิงก์ Google Map
                                     </p>
                                     <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
                                         <!--Google map-->
-                                        <iframe
+                                        <!-- <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.649529332565!2d100.1515582153049!3d18.13396878561503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d8c23dfba58bdf%3A0xa9a8a26f7614e95a!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4LmB4Lie4Lij4LmIIFBocmFlIEhvc3BpdGFs!5e0!3m2!1sth!2sth!4v1632979483518!5m2!1sth!2sth"
                                             width="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                            style="max-width: px;"></iframe>
+                                            style="max-width: px;"></iframe> -->
                                     </div>
                                 </div>
 
@@ -134,18 +136,18 @@
                         </div>
                     </div>
 
-                    <div class="card-header card-sub-title">
-                        <h5 #section2 [translate]="'รายละเอียดร้านค้า'">
+                    <div class="card-header card-sub-title border1" style="background-color: #EAECEE ;">
+                        <h5 #section2 [translate]="'ช่องทางการติดต่ออื่น'">
                             ช่องทางการติดต่ออื่น
                         </h5>
                     </div>
 
-                    <div class="card-header">
+                    <div class="card-header border2" style="background-color: #EAECEE ;">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="form-group row">
                                     <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
-                                        Facebook<span class="text-danger">*</span>
+                                        Facebook
                                     </p>
                                     <div class="col-sm-8 col-lg-8 mb-2">
                                         <input class="form-control" type="text" formControlName="shop_name_th" />
@@ -154,25 +156,23 @@
 
                                 <div class="form-group row">
                                     <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
-                                        Line<span class="text-danger">*</span>
+                                        Line
                                     </p>
-                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                    <div class="col-sm-8 col-lg-8">
                                         <input class="form-control" type="text" formControlName="shop_name_th" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card-block text-center">
-                        <div class="col-12 pl-0 pr-0">
-                            <hr />
-                            <button class="btn btn-success" type="submit" [translate]="'บันทึกข้อมูล'">
-                                บันทึกข้อมูล
-                            </button>
-                        </div>
+                </div>
+                <div class="card text-center noborder">
+                    <div class="col-12">
+                        <button class="btn btn-success" type="submit" [translate]="'บันทึกข้อมูล'"
+                            style="margin: 10px 0px 10px 0px;">
+                            บันทึกข้อมูล
+                        </button>
                     </div>
-
                 </div>
             </div>
         </div>

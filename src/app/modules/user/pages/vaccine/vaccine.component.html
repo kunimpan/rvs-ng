@@ -2,7 +2,7 @@
     <br>
     <div class="row d-flex bd-highlight" style="margin-bottom: 10px;">
         <div class="col-lg-6 col-sm-12 text-center-mobile">
-            <button type="button" class="btn btn-create btn-moblie" (click)="openModal(template)">
+            <button type="button" class="btn btn-create" (click)="openModal(template)">
                 เพิ่มวัคซีน
             </button>
         </div>
@@ -22,7 +22,6 @@
             <thead>
                 <tr>
                     <th class="" style="min-width: 50px;">ลำดับ</th>
-                    <th class="" style="min-width: 130px;">ชนิดวัคซีน</th>
                     <th class="" style="min-width: 120px;">ยี่ห้อวัคซีน</th>
                     <th class="" style="min-width: 300px;">ผลค้างเคียง</th>
                     <th class="" style="min-width: 160px;">ราคา (รวมค่าบริการ)</th>
@@ -32,7 +31,6 @@
             <tbody>
                 <tr style="text-align: center;">
                     <th scope="row">001</th>
-                    <td>Inactivated vaccine</td>
                     <td>Sinova</td>
                     <td>อาจมีอาการไม่สบายหรือคล้ายไข้หวัดใหญ่</td>
                     <td>3,500 บาท</td>
@@ -44,7 +42,6 @@
                 
                 <tr style="text-align: center;">
                     <th scope="row">002</th>
-                    <td>Protein subunit vaccine</td>
                     <td>Novavax</td>
                     <td>อาจมีอาการปวดหัวตัวร้อนปวดเมื่อยร่างกาย</td>
                     <td>4,000 บาท</td>
@@ -55,7 +52,6 @@
                 </tr>
                 <tr style="text-align: center;">
                     <th scope="row">003</th>
-                    <td>mRNA</td>
                     <td>Moderna</td>
                     <td>อาจมีอาการไม่สบายหรือปวดหัวเล็กน้อย</td>
                     <td>3,300 บาท</td>
@@ -66,7 +62,6 @@
                 </tr>
                 <tr style="text-align: center;">
                     <th scope="row">004</th>
-                    <td>Viral vector vaccines</td>
                     <td>AstraZeneca</td>
                     <td>อาจมีอาการปวดหัวตัวร้อนปวดเมื่อยร่างกาย</td>
                     <td>3,000 บาท</td>
@@ -88,19 +83,6 @@
             </button>
         </div>
         <div class="modal-body">
-
-            <div class="form-group row form-default">
-                <label class="col-sm-3 col-form-label" [translate]>ชนิดวัคซีน<span class="text-danger">*</span></label>
-                <div class="col-sm-8">
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>เลือกชนิดวัคซีน</option>
-                        <option value="1">Inactivated vaccine</option>
-                        <option value="2">Protein subunit vaccine</option>
-                        <option value="3">mRNA</option>
-                        <option value="4">Viral vector vaccines</option>
-                      </select>
-                </div>
-            </div><br>
 
             <div class="form-group row form-default">
                 <label class="col-sm-5 col-form-label" [translate]>ยี่ห้อวัคซีน<span class="text-danger">*</span></label>

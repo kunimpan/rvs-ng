@@ -1,9 +1,35 @@
-<app-content>
-    <div class="row center-xs">
-        <div class="col-xs-6">
-            <div class="box">
-                <p>dashboard works! มาแล้วจร้า</p>
-            </div>
+<app-content><br>
+
+    <div class="text1">จำนวนผู้จองวัคซีนแต่ยี่ห้อวันนี้</div>
+    <chart [type]="typeChart3" [data]="dataChart3" [options]="optionsChart3" style="width: 100%; height: 400px;">
+    </chart>
+
+
+    <br>
+    <div class="row">
+        <div class="col-sm-6 mb-3">
+            <div class="text1">จำนวนผู้ฉีดวัคซีนแล้ววันนี้</div>
+            <chart [type]="typeChart" [data]="dataChart" [options]="optionsChart" style="height: 300px;">
+            </chart>
+        </div>
+
+        <div class="col-sm-6 mb-3">
+            <div class="text1">จำนวนผู้จองวัคซีนแต่ยี่ห้อวันนี้</div>
+            <chart [type]="typeChart2" [data]="dataChart2" [options]="optionsChart2" style="height: 300px;"></chart>
         </div>
     </div>
+
+    <!-- <div class="row">
+        <div class="col-sm-6 mb-3">
+            <label class="float-label" [translate]="'ชื่อ'">ชื่อ
+            </label>
+            <input type="text" class="form-control" formControlName="user_firstname" />
+        </div>
+        <div class="col-sm-6 mb-3">
+            <label class="float-label" [translate]="'นามสกุล'">นามสกุล
+            </label>
+            <input type="text" class="form-control" formControlName="user_lastname" />
+        </div>
+    </div> -->
+
 </app-content>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { APP_URL } from 'src/app/app.url';
+import { USER_URL } from '../../user.url';
 
 @Component({
   selector: 'app-hospital-setting',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hospital-setting.component.scss']
 })
 export class HospitalSettingComponent implements OnInit {
+	APP_URL = APP_URL;
+	USER_URL = USER_URL;
 
   constructor() { }
 

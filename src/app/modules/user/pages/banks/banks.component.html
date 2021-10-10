@@ -1,3 +1,100 @@
 <app-content>
-<p>banks works!</p>
+    <br>
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="card" style="border-style: solid; border-width: 3px; border-color: #D6DBDF; background-color: #EAECEE ;">
+                    <div class="card-header card-sub-title">
+                        <h5 #section1 [translate]="'รายละเอียดโรงพยาบาล'">
+                            บัญชีธนาคาร
+                        </h5>
+                        <span [translate]="'กรอกข้อมูลให้ครบถ้วน เพื่อประโยชน์สูงสุดในการใช้งาน'">
+                            กรอกข้อมูลให้ครบถ้วน เพื่อประโยชน์สูงสุดในการใช้งาน
+                        </span>
+                    </div>
+
+                    <div class="card-header border2" style="background-color: #EAECEE ;">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        ธนาคาร<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <select class="form-select" id="inputGroupSelect01">
+                                            <option selected>ธนาคาร...</option>
+                                            <option value="1">กรุงไทย</option>
+                                            <option value="2">กสิกรไทย</option>
+                                            <option value="3">ไทยพาณิชย์</option>
+                                            <option value="3">กรุงเทพ</option>
+                                            <option value="3">ออมสิน</option>
+                                            <option value="3">ทีเอ็มบีธนชาต</option>
+                                            <option value="3">กรุงศรี</option>
+                                            <option value="3">ธ.ก.ส</option>
+                                            <option value="3">ยูโอบี</option>
+                                            <option value="3">ธ.อ.ส</option>
+                                            <option value="3">ซีไอเอ็มบี</option>
+                                            <option value="3">แลนด์ แอน เฮ้าส์</option>
+                                            <option value="3">เกียรตินาคินภัทร</option>
+                                            <option value="3">ไอซีบี (ไทย)</option>
+                                            <option value="3">ไทยเครดิต</option>
+                                            <option value="3">ซิตี้แบงก์</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ชื่อร้าน (ไทย)'">
+                                        ชื่อบัญชีธนาคาร<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_name_th" />
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'ที่อยู่'">
+                                        เลขบัญชีธนาคาร<span class="text-danger">*</span>
+                                    </p>
+                                    <div class="col-sm-8 col-lg-8 mb-2">
+                                        <input class="form-control" type="text" formControlName="shop_address" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <p class="col-sm-4 col-lg-4" [translate]="'Logo Shop'">
+                                        รูปคิวอาร์โค้ด
+                                    </p>
+                                    <div class="col-sm-6 col-lg-8 col-8">
+                                        <div>
+                                            <img class="imglogo" [innerHtml]='msg' *ngIf="msg" src={{imageIcon}}
+                                                style="max-width: 180px;">
+                                            <img [src]="url" *ngIf="url" style="max-height: 150px;">
+                                        </div>
+
+                                        <br>
+                                        <div class="input-group mb-2">
+                                            <input type="file" class="form-control" (change)="selectFile($event)">
+                                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-center noborder">
+                    <div class="col-12 pl-0 pr-0">
+                        <button class="btn btn-success" type="submit" [translate]="'บันทึกข้อมูล'" style="margin: 10px 0px 10px 0px;">
+                            บันทึกข้อมูล
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
 </app-content>
