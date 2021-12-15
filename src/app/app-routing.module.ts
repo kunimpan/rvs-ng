@@ -11,7 +11,9 @@ const routes: Routes = [
   { 
     path: APP_URL.AUTH,
     loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
-  }
+  },
+  { path: APP_URL.ADMIN, 
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

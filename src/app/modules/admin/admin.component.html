@@ -2,9 +2,9 @@
     <br>
     
     <div class="row d-flex bd-highlight" style="margin-bottom: 20px;">
-        <div class="col-lg-6 col-sm-12 text-center-mobile">
+        <div class="col-lg-6 col-sm-12 text-center-mobile" style="margin-top: 5px;">
             <button type="button" class="btn btn-create" (click)="openModal(template)">
-                เพิ่มวัคซีน
+                เพิ่มร้านโรงพยาบาล
             </button>
         </div>
 
@@ -23,61 +23,38 @@
             <thead>
                 <tr>
                     <th class="" style="min-width: 50px;">ลำดับ</th>
-                    <th class="" style="min-width: 120px;">ยี่ห้อวัคซีน</th>
-                    <th class="" style="min-width: 300px;">ผลค้างเคียง</th>
-                    <th class="" style="min-width: 160px;">ราคา (รวมค่าบริการ)</th>
+                    <th class="" style="min-width: 150px;">ชื่อร้านโรงพยาบาล</th>
+                    <th class="" style="min-width: 100px;">จังหวัด</th>
                     <th class="" style="min-width: 150px;">จัดการข้อมูล</th>
                 </tr>
             </thead>
             <tbody>
                 <tr style="text-align: center;">
                     <th scope="row">001</th>
-                    <td>Sinova</td>
-                    <td>อาจมีอาการไม่สบายหรือคล้ายไข้หวัดใหญ่</td>
-                    <td>3,500 บาท</td>
+                    <td>โรงพยาบาลแพร่</td>
+                    <td>แพร่</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
+                        <button type="button" class="btn btn-outline-danger">ลบ</button>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <th scope="row">002</th>
+                    <td>โรงพยาบาลเชียงใหม่ราม</td>
+                    <td>เชียงใหม่</td>
                     <td>
                         <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
                         <button type="button" class="btn btn-outline-danger">ลบ</button>
                     </td>
                 </tr>
                 
-                <tr style="text-align: center;">
-                    <th scope="row">002</th>
-                    <td>Novavax</td>
-                    <td>อาจมีอาการปวดหัวตัวร้อนปวดเมื่อยร่างกาย</td>
-                    <td>4,000 บาท</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="row">003</th>
-                    <td>Moderna</td>
-                    <td>อาจมีอาการไม่สบายหรือปวดหัวเล็กน้อย</td>
-                    <td>3,300 บาท</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="row">004</th>
-                    <td>AstraZeneca</td>
-                    <td>อาจมีอาการปวดหัวตัวร้อนปวดเมื่อยร่างกาย</td>
-                    <td>3,000 บาท</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </div>
     <ng-template #template>
         <div class="modal-header">
             <h6 class="modal-title pull-left" [translate]>
-                <b>เพิ่มวัคซีน</b>
+                <b>เพิ่มร้านโรงพยาบาล</b>
             </h6>
             <button type="button" class="btn-close pull-right" (click)="modalRef.hide()">
                 <span aria-hidden="true">&times;</span>
@@ -86,23 +63,22 @@
         <div class="modal-body">
 
             <div class="form-group row form-default">
-                <label class="col-sm-5 col-form-label" [translate]>ยี่ห้อวัคซีน<span class="text-danger">*</span></label>
+                <label class="col-sm-5 col-form-label" [translate]>ชื่อร้านโรงพยาบาล<span class="text-danger">*</span></label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" formControlName="setup_product_name" />
                 </div>
             </div><br>
 
             <div class="form-group row form-default">
-                <label class="col-sm-5 col-form-label" [translate]>ผลค้างเคียง<span class="text-danger">*</span></label>
+                <label class="col-sm-5 col-form-label" [translate]>จังหวัด<span class="text-danger">*</span></label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" formControlName="setup_product_name" />
-                </div>
-            </div><br>
-
-            <div class="form-group row form-default">
-                <label class="col-sm-5 col-form-label" [translate]>ราคา<span class="text-danger">*</span></label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" formControlName="setup_product_name" />
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>จังหวัด...</option>
+                        <option value="1">แพร่</option>
+                        <option value="2">เชียงใหม่</option>
+                        <option value="3">ลำพูน</option>
+                        <option value="3">ลำปาง</option>
+                    </select>
                 </div>
             </div><br>
         </div>

@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { ChartModule } from 'angular2-chartjs';
+import { IonicModule } from '@ionic/angular';
 import 'chart.piecelabel.js';
 
 @NgModule({
@@ -25,7 +26,8 @@ import 'chart.piecelabel.js';
         MatIconModule,
         MatDividerModule,
         MatListModule,
-        ChartModule
+        ChartModule,
+        IonicModule
     ],
 })
 export class MaterialModule { }

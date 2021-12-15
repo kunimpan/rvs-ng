@@ -2,9 +2,9 @@
     <br>
     <div class="row" style="margin-bottom: 10px;">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center-mobile">
-            <button type="button" class="btn btn-danger btn-create btn-moblie" (click)="openCreate(template)">
-                ปิดรอบจองนี้
-            </button>
+            <!-- <button type="button" class="btn btn-danger btn-create btn-moblie" (click)="openCreate(template)">
+                นัดหมายฉีดวัคซีนเข็มที่ 2
+            </button> -->
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -23,7 +23,6 @@
                 <tr>
                     <th class="" style="min-width: 50px;">ลำดับ</th>
                     <th class="" style="min-width: 120px;">เลขออร์เดอร์</th>
-                    <th class="" style="min-width: 100px;">วันที่เข้าจอง</th>
                     <th class="" style="min-width: 200px;">ชื่อ - นามสกุล</th>
                     <th class="" style="min-width: 190px;">เลขบัตรประจำตัวประชาชน</th>
                     <th class="" style="min-width: 100px;">สถานะ</th>
@@ -34,13 +33,12 @@
                 <tr style="text-align: center;">
                     <th scope="row">001</th>
                     <td>OR0000001</td>
-                    <td>02/09/64</td>
                     <td>นายหล่อเท่ อย่างหมา</td>
                     <td>1-5499-00604-63-0</td>
                     <td>
                         <div class="d-flex justify-content-center">
                             <div class="d-flex align-items-center justify-content-center bg-status">
-                                ขำระเงินสำเร็จ
+                                ฉีดวัคซีนสำเร็จ
                             </div>
                         </div>
                     </td>
@@ -54,13 +52,12 @@
                 <tr style="text-align: center;">
                     <th scope="row">002</th>
                     <td>OR0000002</td>
-                    <td>04/09/64</td>
                     <td>นายจนจัด บ้านหาย</td>
                     <td>1-5499-00708-58-0</td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <div class="d-flex align-items-center justify-content-center bg-status-red">
-                                ค้างชำระเงิน
+                            <div class="d-flex align-items-center justify-content-center bg-status-yellow">
+                                รอฉีดวัคซีน
                             </div>
                         </div>
                     </td>
@@ -73,32 +70,12 @@
                 <tr style="text-align: center;">
                     <th scope="row">003</th>
                     <td>OR0000003</td>
-                    <td>03/09/64</td>
                     <td>นางรอคอย อย่างเดียวดาย</td>
                     <td>3-5499-00082-71-7</td>
                     <td>
                         <div class="d-flex justify-content-center">
                             <div class="d-flex align-items-center justify-content-center bg-status-yellow">
-                                รอตรวจสอบ
-                            </div>
-                        </div>
-                    </td>
-
-                    <td>
-                        <button type="button" class="btn btn-outline-success">ตรวจสอบ</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="row">004</th>
-                    <td>OR0000004</td>
-                    <td>02/09/64</td>
-                    <td>นายหล่อเท่ อย่างหมา</td>
-                    <td>1-5499-00604-63-0</td>
-                    <td>
-                        <div class="d-flex justify-content-center">
-                            <div class="d-flex align-items-center justify-content-center bg-status">
-                                ขำระเงินสำเร็จ
+                                รอฉีดวัคซีน
                             </div>
                         </div>
                     </td>
@@ -115,7 +92,7 @@
     <ng-template #template>
         <div class="modal-header">
             <h6 class="modal-title pull-left" [translate]>
-                นัดหมายฉีดวัคซีนเข็มที่ 1
+                นัดหมายฉีดวัคซีนเข็มที่ 2
             </h6>
             <button type="button" class="btn-close pull-right" (click)="modalRef.hide()">
                 <span aria-hidden="true">&times;</span>
@@ -127,7 +104,7 @@
                     <span class="">ยี่ห้อวัคซีน : </span><span class="text-danger">Moderna</span>
                 </div>
                 <div class="col-sm-6">
-                    <span class="">เข็ม : </span><span class="text-danger">แรก</span>
+                    <span class="">เข็ม : </span><span class="text-danger">สอง</span>
                 </div>
             </div><br>
 
@@ -168,6 +145,7 @@
                 <div class="col-sm-12">
                     <span class="">เลขบัตรประจำตัวประชาชน : </span><span>1-5499-00604-63-0</span>
                 </div>
+                
             </div><br>
 
             <div class="form-group row">
@@ -188,27 +166,50 @@
 
         <div class="modal-header">
             <h6 class="modal-title pull-left" [translate]>
-                <b>หลักฐานการชำระเงิน</b>
+                <b>ข้อมูลออร์เดอร์</b>
             </h6>
         </div>
         <div class="modal-body">
             <div class="form-group row">
+                <div class="col-sm-12">
+                    <span class="">สถานที่ฉีด : </span><span>โรงพยาบาลแพร่</span>
+                </div>
+            </div><br>
+
+            <div class="form-group row">
                 <div class="col-sm-6">
-                    <img class="imgbank img-fluid" src={{bank}}>
+                    <span class="">วัคซีน : </span><span>Moderna</span>
+                </div>
+                <div class="col-sm-3">
+                    <span class="">เข็มที่ : </span><span>2</span>
+                </div>
+                <div class="col-sm-3">
+                    <span class="">คิวที่ : </span><span>39</span>
+                </div>
+                
+            </div><br>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <span class="">เข้ารับการฉีดวันที่ : </span><span>16/11/2564</span>
                 </div>
                 <div class="col-sm-6">
-                    <span class="">วันที่โอน : </span><span>02/09/2564</span><br>
-                    <span class="">เวลาที่โอน : </span><span>12:09</span><br>
-                    <span class="">สถานะ : </span><span>รอตรวจสอบ</span><br><br>
-                    <button type="button" class="btn btn-submit" style="margin-bottom: 10px;">หลักฐานถูกต้อง&nbsp;&nbsp;</button><br>
-                    <button type="button" class="btn btn-danger">หลักฐานไม่ถูกต้อง</button>
+                    <span class="">เข้ารับการฉีดเวลา : </span><span>14.00 น.</span>
                 </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12" style="text-align: center;">
+                    
+                </div>
+                
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')" [translate]>
-                ปิด
-            </button>
+            <button type="button" class="btn btn-submit">ยืนยันฉีดวัคซีนสำเร็จ</button>
+            <button type="button" class="btn btn-danger">ยกลิกการยืนยัน</button>
         </div>
     </ng-template>
 </app-content>
+
+
+                    

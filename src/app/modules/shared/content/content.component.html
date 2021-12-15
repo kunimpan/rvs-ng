@@ -1,7 +1,9 @@
 <div class="d-flex" id="wrapper">
-
   <!-- Sidebar -->
-  <div class="bg-light border-right" id="sidebar-wrapper" style="border-right: 2px solid #D6DBDF;"
+  <div class="bg-light border-right" id="sidebar-wrapper" style="border-right: 2px solid #D6DBDF; 
+  border-left: 2px solid #D6DBDF;
+  border-top: 2px solid #D6DBDF;
+  border-bottom: 2px solid #D6DBDF; "
     [ngClass]="status ? 'hide' : 'show'">
     <div class="sidebar-heading text-center" style="height: 100px;">
       <img src="../../../../../assets/images/4.5a.png" style="width: 200px;" />
@@ -10,6 +12,10 @@
     
     <div class="list-group list-group-flush">
       <h4 class="Prompt text-center"><b>โรงพยาบาลแพร่</b></h4>
+      <!-- <div class="text-center" style="height: 100px;">
+        <img src="../../../../../assets/images/logo2.png" style="width: 100px;" />
+      </div> -->
+      
       <mat-nav-list>
         <a mat-list-item (click)="onClickMenu(USER_URL.DASHBOARD)">
           <mat-icon>dashboard</mat-icon>&nbsp;&nbsp;
@@ -35,6 +41,10 @@
           <mat-icon>settings_overscan</mat-icon>&nbsp;&nbsp;
           <span class="Prompt">สแกนคิวอาร์โค้ด</span>
         </a>
+        <a mat-list-item (click)="onClickMenu1(ADMIN_URL.SHOP_HOSPITAL)">
+          <mat-icon>extension</mat-icon>&nbsp;&nbsp;
+          <span class="Prompt">แอดมิน</span>
+        </a>
       </mat-nav-list>
       <!-- <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.DASHBOARD)"> Dashboard</a>
       <a class="list-group-item list-group-item-action bg-light" (click)="onClickMenu(USER_URL.HOSPITAL_SETTING)">รายละเอียดโรงพยาบาล</a>
@@ -44,10 +54,10 @@
       <a class="list-group-item list-group-item-action bg-light">Status</a> -->
     </div>
     <div class="sidebar-bottom">
-
+      
       <p style="text-align: right; margin-right: 5%;">RVS v0.1</p>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-danger" style="margin-bottom: 5%;">ออกจากระบบ</button>
+        <button type="button" class="btn btn-danger" style="margin-bottom: 5%;" (click)="onClickMenu2(AUTH_URL.LOGIN)">ออกจากระบบ</button>
       </div>
     </div>
   </div>
@@ -56,7 +66,7 @@
   <!-- Page Content -->
   <div id="page-content-wrapper">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #D6DBDF;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid #D6DBDF; border-top: 2px solid #D6DBDF; border-right: 2px solid #D6DBDF;" >
 
       <div class="container-fluid">
         <button class="btn btn-primary" (click)="clickEvent()">เปิด/ปิด เมนู</button>

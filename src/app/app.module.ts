@@ -8,6 +8,8 @@ import { UserModule } from './modules/user/user.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from './modules/auth/auth.module';
+import { IonicModule } from '@ionic/angular';
+import { AdminModule } from './modules/admin/admin.module';
 
 
 @NgModule({
@@ -18,10 +20,12 @@ import { AuthModule } from './modules/auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule,
-    UserModule,
+    // SharedModule,
+    // UserModule,
+    // AdminModule,
     AuthModule,
     NgbModule,
+    IonicModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

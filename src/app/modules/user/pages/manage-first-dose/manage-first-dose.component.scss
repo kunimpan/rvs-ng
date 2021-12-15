@@ -23,6 +23,23 @@ thead{
     margin-left: 10px;
 }
 
+.bg-status{
+    color: #ffffff;
+    background-color: #1ABC9C;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.bg-status-yellow{
+    color: #ffffff;
+    background-color: #F39C12;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
 .bg-number{
     color: #ffffff;
     background-color: #1ABC9C;
@@ -34,12 +51,13 @@ thead{
 
 .bg-number-red{
     color: #ffffff;
-    background-color: #E74C3C;
+    background-color: #ff221b;
     height: 35px;
     width: 75px;
     border-radius: 8px;
     vertical-align: middle;
 }
+  
 
 // td{
 //     height: 500px;

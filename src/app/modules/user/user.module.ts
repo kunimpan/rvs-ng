@@ -11,6 +11,10 @@ import { SharedModule } from '../shared/shared.module';
 import { ManageOrdersComponent } from './components/manage-orders/manage-orders.component';
 import { ManageFormComponent } from './components/manage-form/manage-form.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
+import { ManageFirstDoseComponent } from './pages/manage-first-dose/manage-first-dose.component';
+import { ManageSecondDoseComponent } from './pages/manage-second-dose/manage-second-dose.component';
+import { ManageOrdersFirstDoseComponent } from './components/manage-orders-first-dose/manage-orders-first-dose.component';
+import { ManageOrdersSecondDoseComponent } from './components/manage-orders-second-dose/manage-orders-second-dose.component'; 
 
 
 // Scanner
@@ -26,7 +30,11 @@ import { ScanQrcodeComponent } from './pages/scan-qrcode/scan-qrcode.component';
     ManageBookingComponent,
     ManageOrdersComponent,
     ManageFormComponent,
-    ScanQrcodeComponent
+    ScanQrcodeComponent,
+    ManageFirstDoseComponent,
+    ManageSecondDoseComponent,
+    ManageOrdersFirstDoseComponent,
+    ManageOrdersSecondDoseComponent
   ],
   imports: [
     CommonModule,

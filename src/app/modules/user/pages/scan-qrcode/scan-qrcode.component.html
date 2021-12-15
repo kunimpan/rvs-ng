@@ -1,3 +1,30 @@
 <app-content>
-    <p>scan-qrcode works!</p>
+    <div class="con">
+        <p class="texthead">สแกนคิวอาร์โค้ด</p>
+    <button class="btn btn-primary" (click)="startScan()" style="width: 100%; margin-bottom: 10px;">
+        START SCAN
+      </button>
+      
+      <video #video [hidden]="!scanActive" width="100%" style="max-width: 500px;"></video>
+
+      <canvas #canvas hidden></canvas>
+
+
+      <button class="btn btn-danger"  (click)="stopScan()" style="width: 100%;" *ngIf="scanActive">
+        STOP SCAN
+      </button>
+
+      <button class="btn btn-warning" (click)="reset()" style="width: 100%;" *ngIf="scanResult">
+        RESET SCAN
+      </button>
+
+      <div class="card border4" *ngIf="scanResult" style="margin-top: 10px;">
+        <div class="card-header border1">
+          <div class="card-title" style="font-size: 20px;">ข้อมูลนัดฉีดวัคซีน</div>
+        </div>
+        <div class="" style="font-size: 16px;">
+          {{ scanResult }}
+        </div>
+      </div>
+    </div>
 </app-content>

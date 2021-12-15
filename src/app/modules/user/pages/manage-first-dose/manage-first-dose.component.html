@@ -1,16 +1,8 @@
 <app-content>
     <br>
     <div class="row d-flex bd-highlight" style="margin-bottom: 10px;">
-        <div class="col-lg-6 col-sm-12 text-center-mobile">
-            <button type="button" class="btn btn-create btn-moblie" (click)="openModal(template)">
-                สร้างรอบจอง
-            </button>
-            <button type="button" class="btn btn-needle1 btn-moblie" (click)="onClickMenu(USER_URL.MANAGE_FIRST_DOSE)">
-                รอบฉีดเข็มแรก
-            </button>
-            <button type="button" class="btn btn-needle2 btn-moblie" (click)="onClickMenu(USER_URL.MANAGE_SECOND_DOSE)">
-                รอบฉีดเข็มสอง
-            </button>
+        <div class="col-lg-6 col-sm-12 text-center-mobile" style="margin: auto;">
+            <h4><b>รอบฉีดวัคซีนเข็มแรก</b></h4>
         </div>
 
         <div class="col-lg-6 col-sm-12">
@@ -31,9 +23,9 @@
                     <th class="" style="min-width: 120px;">เลขที่รอบจอง</th>
                     <th class="" style="min-width: 100px;">วัคซีน</th>
                     <th class="" style="min-width: 55px;">เข็มที่</th>
-                    <th class="" style="min-width: 100px;">วันเปิดจอง</th>
-                    <th class="" style="min-width: 100px;">วันปิดจอง</th>
-                    <th class="" style="min-width: 130px;">จำนวนคิวจอง</th>
+                    <th class="" style="min-width: 150px;">วันที่เข้ารับการฉีด</th>
+                    <th class="" style="min-width: 100px;">เวลา</th>
+                    <th class="" style="min-width: 160px;">จำนวนผู้เข้ารับการฉีด</th>
                     <th class="" style="min-width: 270px;">จัดการข้อมูล</th>
                 </tr>
             </thead>
@@ -44,58 +36,17 @@
                     <td>Moderna</td>
                     <td>1</td>
                     <td>20/08/64</td>
-                    <td>02/09/64</td>
+                    <td>14.00 น.</td>
                     <td>
                         <div class="d-flex justify-content-center">
                             <div class="d-flex align-items-center justify-content-center bg-number">
-                                23/50
-                            </div>
-                        </div>
-                    </td>
-
-                    <td>
-                        <button type="button" class="btn btn-outline-success"
-                            (click)="onClickMenu(USER_URL.MANAGE_ORDERS)">ตรวจสอบ</button>&nbsp;
-                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="row">002</th>
-                    <td>RR0000002</td>
-                    <td>Moderna</td>
-                    <td>1</td>
-                    <td>20/08/64</td>
-                    <td>02/09/64</td>
-                    <td>
-                        <div class="d-flex justify-content-center">
-                            <div class="d-flex align-items-center justify-content-center bg-number-red">
-                                49/50
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-outline-success">ตรวจสอบ</button>&nbsp;
-                        <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
-                        <button type="button" class="btn btn-outline-danger">ลบ</button>
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="row">003</th>
-                    <td>RR0000003</td>
-                    <td>Moderna</td>
-                    <td>1</td>
-                    <td>20/08/64</td>
-                    <td>02/09/64</td>
-                    <td>
-                        <div class="d-flex justify-content-center">
-                            <div class="d-flex align-items-center justify-content-center bg-number-red">
                                 45/50
                             </div>
                         </div>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-outline-success">ตรวจสอบ</button>&nbsp;
+                        <button type="button" class="btn btn-outline-success"
+                            (click)="onClickMenu(USER_URL.MANAGE_ORDERS_FISRT_DOSE)">ตรวจสอบ</button>&nbsp;
                         <button type="button" class="btn btn-outline-warning">แก้ไข</button>&nbsp;
                         <button type="button" class="btn btn-outline-danger">ลบ</button>
                     </td>
@@ -152,5 +103,4 @@
             </button>
         </div>
     </ng-template>
-
 </app-content>
